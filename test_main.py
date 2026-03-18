@@ -27,16 +27,20 @@ def test_valid_homepage():
     driver=valid_login("standard_user","secret_sauce")
     assert "https://www.saucedemo.com/" in driver.current_url
     driver.quit()
+    
 def test_invalid_homepage():
     driver=valid_login("standard_user","secret_sauce")
     assert "https://www.saucedemos.com/" in driver.current_url
     driver.quit()
+    
 def test_valid_dashboard():
     driver=valid_login("standard_user","secret_sauce")
     assert "https://www.saucedemo.com/" in driver.current_url
     driver.quit()
+    
 def test_invalid_dashboard():
     driver=valid_login("standard_user","secret")
     assert "https://www.saucedemo.com/" in driver.current_url
     driver.quit()
+    
 #pytest --html=report.html
