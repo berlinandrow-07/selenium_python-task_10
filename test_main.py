@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
-
 def valid_login(user,passwords):
     driver = webdriver.Chrome()
     page_url = "https://www.saucedemo.com/"
@@ -14,8 +12,6 @@ def valid_login(user,passwords):
     login=driver.find_element(By.ID,"login-button")
     login.click()
     return driver
-
-
 
 def test_valid_title():
     driver=valid_login("standard_user","secret_sauce")
